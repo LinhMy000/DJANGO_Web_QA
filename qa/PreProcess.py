@@ -1,11 +1,11 @@
 import re
-# import nltk
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-# nltk.download('stopwords')
+nltk.download('stopwords')
 stop = set(stopwords.words('english1'))
 from nltk.stem import WordNetLemmatizer
-# nltk.download('wordnet')
+nltk.download('wordnet')
 wn = WordNetLemmatizer()
 
 def clean(text):
