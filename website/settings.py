@@ -4,7 +4,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--v#pn)k^w%zo))dwq=-bv$9+q+e7gh!(kfs@s4r=#%7-4g7dbo'
+SECRET_KEY = "heroku config:set DISABLE_COLLECTSTATIC=1 SECRET_KEY='django-insecure--v#pn)k^w%zo))dwq=-bv$9+q+e7gh!(kfs@s4r=#%7-4g7dbo'"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -87,11 +87,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
