@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q&A - Answering any questions</title>
+</head>
+<body style="background-color:#f2f2f2">
+    {% load static %}
+
+    <img src="{% static 'image/logo.png' %}" alt="LOGO" style="width: 25%; display: block; margin-top:40px; margin-bottom:15px; margin-left:auto; margin-right:auto;">
+
+    <form action="result" method="POST">
+      {% csrf_token %}
+
+      <style data-iml="1623038067200">
+          .A8SBwf{position:relative;margin:0 auto;padding-top:6px;width:484px;width:auto;max-width:484px;}
+          #searchform.big .A8SBwf{width:584px;width:auto;max-width:584px}.A8SBwf{width:auto;max-width:584px}
+          .RNNXgb{background:#fff;display:flex;border:1px solid #999999;box-shadow:none;border-radius:24px;z-index:3;height:44px;margin:0 auto;width:482px;width:auto;}
+          .minidiv .RNNXgb{background:#fff;height:32px;border-radius:16px;margin:10px 0 0}
+          .emcav .RNNXgb{border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:rgba(223,225,229,0);box-shadow:0 1px 6px rgba(32,33,36,.28)}
+          .minidiv .emcav .RNNXgb{border-bottom-left-radius:0;border-bottom-right-radius:0}
+          .emcav.emcat .RNNXgb{border-bottom-left-radius:24px;border-bottom-right-radius:24px}
+          .minidiv .emcav.emcat .RNNXgb{border-bottom-left-radius:16px;border-bottom-right-radius:16px}
+          .RNNXgb:hover,.sbfc .RNNXgb{background-color:#fff;box-shadow:0 1px 6px rgba(32,33,36,.28);border-color:rgba(223,225,229,0)}
+          .UUbT9{width:auto}
+          #searchform.big .RNNXgb{width:582px;width:auto}
+          .RNNXgb{width:auto;max-width:584px}
+          .SDkEP{flex:1;display:flex;padding:5px 8px 0 16px;padding-left:14px}
+          .minidiv .SDkEP{padding-top:0}
+          .FPdoLc{padding-top:18px;top:53px;z-index:0;}
+          #searchform.big .FPdoLc{}
+          .iblpc{display:flex;align-items:center;padding-right:13px;margin-top:-5px}
+          .minidiv .iblpc{margin-top:0}
+      </style>
+      <div class="RNNXgb" jsname="RNNXgb">
+          <div class="SDkEP">
+              <div class="iblpc" jsname="uFMOof" style="width:2%">
+                  <div class="CcAdNb">
+                      <span>
+                          <img src="{% static 'image/search-icon.png' %}" alt="search-icon" style="width:100%">
+                      </span>
+                  </div>
+              </div>
+
+              <div jscontroller="JGHKP" class="a4bIc" jsname="gLFyf" jsaction="h5M12e;input:d3sQLd;blur:jI3wzf">
+                  <style data-iml="1623038067200">
+                      .gLFyf{background-color:transparent;border:none;margin:0;padding:0;color:rgba(0,0,0,.870);word-wrap:break-word;outline:none;display:flex;flex:100%;-webkit-tap-highlight-color:transparent;margin-top:-37px;height:34px;font-size:16px}.minidiv .gLFyf{margin-top:-35px;}.a4bIc{display:flex;flex:1;flex-wrap:wrap}.pR49Ae{color:transparent;flex:100%;white-space:pre;height:34px}.pR49Ae span{background:url("/images/experiments/wavy-underline.png") repeat-x scroll 0 100% transparent;padding:0 0 10px 0;}
+                  </style>
+                  <div class="pR49Ae gsfi" jsname="vdLsw"></div>
+                      <input class="gLFyf gsfi" jsaction="paste:puy29d;" maxlength="512" name="search" type="text"
+                             aria-autocomplete="both" aria-haspopup="false" autocapitalize="off" autocomplete="off"
+                             autocorrect="off" autofocus="" role="combobox" spellcheck="false" title="Tìm kiếm"
+                             aria-label="Tìm kiếm" data-ved="0ahUKEwjJx528zoTxAhWuwosBHUIvCysQ39UDCAQ"
+                              placeholder="Question" value="">
+              </div>
+
+              <div class="dRYYxd">
+                  <style data-iml="1623038067201">
+                      .XDyW0e{flex:1 0 auto;display:flex;cursor:pointer;align-items:center;border:0;background:transparent;outline:none;padding:0 8px;width:24px;line-height:44px}.goxjub{height:24px;width:24px;vertical-align:middle}.minidiv .XDyW0e{line-height:32px}.minidiv .goxjub{width:20px;height:20px}
+                  </style>
+                  <div jscontroller="unV4T" class="XDyW0e" aria-label="Tìm kiếm bằng giọng nói" role="button" tabindex="0"
+                       jsaction="h5M12e;rcuQ6b:npT2md" data-ved="0ahUKEwjJx528zoTxAhWuwosBHUIvCysQvs8DCAY">
+                      <svg class="goxjub" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path fill="#4285f4"
+                                d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path>
+                          <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                          <path fill="#fbbc05"
+                                d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"></path>
+                          <path fill="#ea4335"
+                                d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"></path>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <input type="submit" value="OK" style="display:none">
+    </form>
+
+</body>
+</html>
